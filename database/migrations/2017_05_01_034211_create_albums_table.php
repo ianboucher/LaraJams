@@ -17,6 +17,7 @@ class CreateAlbumsTable extends Migration
         {
             $table->increments('id');
             $table->string('title');
+            $table->string('artist');
             $table->string('label');
             $table->integer('year');
             $table->string('artURL');
