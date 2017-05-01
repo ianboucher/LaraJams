@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
                 'artist' => "Faker McFake",
                 'label'  => "EMI",
                 'year'   => "2020",
-                'artURL' => "/resources/assets/images/album_covers/{$i}.png"
+                'artURL' => "../images/album_covers/{$i}.png"
             ]);
 
             $album->save();
@@ -59,21 +59,21 @@ class DatabaseSeeder extends Seeder
         // ========================== CREATE SONGS =============================
 
         $songs = [
-            [ 'title' => "Blue",                 'duration' => 161710, 'audioUrl' => "/resources/assets/music/blue"    ],
-            [ 'title' => "Green",                'duration' => 103960, 'audioUrl' => "/resources/assets/music/green"   ],
-            [ 'title' => "Red",                  'duration' => 268450, 'audioUrl' => "/resources/assets/music/red"     ],
-            [ 'title' => "Pink",                 'duration' => 153140, 'audioUrl' => "/resources/assets/music/pink"    ],
-            [ 'title' => "Magenta",              'duration' => 374220, 'audioUrl' => "/resources/assets/music/magenta" ],
-            [ 'title' => "Hello, Operator?",     'duration' => 161710, 'audioUrl' => "/resources/assets/music/blue"    ],
-            [ 'title' => "Ring, ring, ring",     'duration' => 103960, 'audioUrl' => "/resources/assets/music/green"   ],
-            [ 'title' => "Fits in your pocket",  'duration' => 268450, 'audioUrl' => "/resources/assets/music/red"     ],
-            [ 'title' => "Can you hear me now?", 'duration' => 153140, 'audioUrl' => "/resources/assets/music/pink"    ],
-            [ 'title' => "Wrong phone number",   'duration' => 374220, 'audioUrl' => "/resources/assets/music/magenta" ],
-            [ 'title' => "Fake song",            'duration' => 161710, 'audioUrl' => "/resources/assets/music/blue"    ],
-            [ 'title' => "Fake, fake, fake",     'duration' => 103960, 'audioUrl' => "/resources/assets/music/green"   ],
-            [ 'title' => "Fake in your pocket",  'duration' => 268450, 'audioUrl' => "/resources/assets/music/red"     ],
-            [ 'title' => "Another fake song",    'duration' => 153140, 'audioUrl' => "/resources/assets/music/pink"    ],
-            [ 'title' => "Fake phone number",    'duration' => 374220, 'audioUrl' => "/resources/assets/music/magenta" ],
+            [ 'title' => "Blue",                 'duration' => 161710, 'audioUrl' => "../music/blue"    ],
+            [ 'title' => "Green",                'duration' => 103960, 'audioUrl' => "../music/green"   ],
+            [ 'title' => "Red",                  'duration' => 268450, 'audioUrl' => "../music/red"     ],
+            [ 'title' => "Pink",                 'duration' => 153140, 'audioUrl' => "../music/pink"    ],
+            [ 'title' => "Magenta",              'duration' => 374220, 'audioUrl' => "../music/magenta" ],
+            [ 'title' => "Hello, Operator?",     'duration' => 161710, 'audioUrl' => "../music/blue"    ],
+            [ 'title' => "Ring, ring, ring",     'duration' => 103960, 'audioUrl' => "../music/green"   ],
+            [ 'title' => "Fits in your pocket",  'duration' => 268450, 'audioUrl' => "../music/red"     ],
+            [ 'title' => "Can you hear me now?", 'duration' => 153140, 'audioUrl' => "../music/pink"    ],
+            [ 'title' => "Wrong phone number",   'duration' => 374220, 'audioUrl' => "../music/magenta" ],
+            [ 'title' => "Fake song",            'duration' => 161710, 'audioUrl' => "../music/blue"    ],
+            [ 'title' => "Fake, fake, fake",     'duration' => 103960, 'audioUrl' => "../music/green"   ],
+            [ 'title' => "Fake in your pocket",  'duration' => 268450, 'audioUrl' => "../music/red"     ],
+            [ 'title' => "Another fake song",    'duration' => 153140, 'audioUrl' => "../music/pink"    ],
+            [ 'title' => "Fake phone number",    'duration' => 374220, 'audioUrl' => "../music/magenta" ],
         ];
 
 

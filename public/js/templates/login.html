@@ -1,0 +1,21 @@
+<ng-include src="'top_nav.html'"></ng-include>
+
+<section class="hero-content form-background">
+
+    <h1 class="hero-title">{{ auth.welcome }}</h1>
+
+    <form ng-submit="login()">
+        <div>
+            <input type="email" placeholder="Email" ng-model="user.email">
+        </div>
+        <br/>
+
+        <div>
+            <input type="password" placeholder="Password" ng-model="user.password">
+        </div>
+        <br/>
+
+        <input type="submit" class="button" value="Let's go!">
+    </form>
+
+</section>

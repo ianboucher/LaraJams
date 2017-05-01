@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // API ROUTES =============================================================
 Route::group(["prefix" => "v1.0.0"], function()
 {
-    Route::resource('albums',    'AlbumsController',    ['only' => ['index', 'show']]);
-    Route::resource('songs',     'SongsController',     ['only' => ['index', 'show']]);
-    Route::resource('playlists', 'PlaylistsController', ['only' => ['index', 'show', 'create']]);
+    Route::resource('albums',    'AlbumController');
+    Route::resource('songs',     'SongController',     ['only' => ['index', 'show']]);
+    Route::resource('playlists', 'PlaylistController', ['only' => ['index', 'show', 'create']]);
 });

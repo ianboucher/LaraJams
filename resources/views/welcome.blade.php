@@ -1,95 +1,67 @@
-<!doctype html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html ng-app="blocJams">
 
-        <title>Laravel</title>
+<head>
+    <title>Larajams</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <link rel="icon" href="../../favicon.ico">
 
-            .full-height {
-                height: 100vh;
-            }
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+    <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/landing.css">
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+</head>
 
-            .position-ref {
-                position: relative;
-            }
+<body>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+    <!-- INJECT THE ANGULAR TEMPLATES -->
+    <ui-view></ui-view>
 
-            .content {
-                text-align: center;
-            }
 
-            .title {
-                font-size: 84px;
-            }
+    <!-- APPLICATION DEPENDENCIES -->
+    <!-- TODO: Consider loading dependencies from 'node_modules' folder? -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/satellizer/0.15.5/satellizer.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bean/1.0.15/bean.min.js"></script>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+    <!-- APPLICATION SCRIPTS -->
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+    <!-- Bootstrapping -->
+    <script src="/js/app.js"></script>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+    <!-- Services -->
+    <script src="/js/services/DataService.js"></script>
+    <script src="/js/services/SongPlayer.js"></script>
+
+    <!-- Directives -->
+    <script src="/js/directives/seekBar.js"></script>
+
+    <!-- Filters -->
+    <script src="/js/filters/timecode.js"></script>
+
+    <!-- Controllers -->
+    <script src="/js/controllers/AlbumCtrl.js"></script>
+    <script src="/js/controllers/AuthCtrl.js"></script>
+    <script src="/js/controllers/CollectionCtrl.js"></script>
+    <script src="/js/controllers/LandingCtrl.js"></script>
+    <script src="/js/controllers/NavCtrl.js"></script>
+    <script src="/js/controllers/NewPlaylistCtrl.js"></script>
+    <script src="/js/controllers/PlayerBarCtrl.js"></script>
+    <script src="/js/controllers/PlaylistCtrl.js"></script>
+    <script src="/js/controllers/PlaylistsCtrl.js"></script>
+    <script src="/js/controllers/SongsCtrl.js"></script>
+
+</body>
 </html>

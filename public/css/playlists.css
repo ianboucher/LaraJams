@@ -1,0 +1,72 @@
+.playlist-heading > h1 {
+   padding-left: 0.5rem;
+   font-size: 3rem;
+   font-weight: 300;
+   float: left;
+}
+
+.playlist-heading .button {
+    border: 1px solid gray;
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 3px;
+    float: right;
+    margin-top: 3rem;
+    margin-right: 0.6rem;
+}
+
+.song-item-add-remove .button {
+    border: 1px solid gray;
+    height: 1.2rem;
+    width: 2.5rem;
+    border-radius: 0.75rem;
+    font-size: 0.6rem;
+}
+
+.playlist-album-container {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.playlist-album-container .caption p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.playlist-album-container .caption p a {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.playlist-album-container .caption p a.album-name {
+    color: white;
+    text-decoration: none;
+}
+
+.playlist-album-container img {
+    width: 95%;
+    opacity: 0.5;
+    position: relative;
+}
+
+.playlist-album-container .ion-ios-list-outline {
+    position: absolute;
+    top: 0%;
+    left: 6%;
+    z-index: 1;
+    font-size: 2rem;
+}
+
+@media (max-width: 720px) {
+    .playlist-heading > h1 {
+        float: none;
+    }
+
+    .playlist-heading .button {
+        float: none;
+        margin-top: 0;
+        margin-left: 0.6rem;
+    }
+}

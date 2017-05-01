@@ -25,7 +25,6 @@ class SongController extends Controller
      */
     public function show($id)
     {
-        $song = Song::find($id);
-        return $song->with('album')->get();
+        return Song::find($id)->load('album');
     }
 }

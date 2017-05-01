@@ -1,0 +1,44 @@
+<ng-include src="'js/templates/left_nav.html'"></ng-include>
+
+<div class="album-cover-art" style="background-image:url({{ album.albumData.artURL }})">
+    <img src="{{album.albumData.artURL}}">
+</div>
+
+<main class="container narrow">
+
+    <section class="clearfix">
+        <div class="album-view-details column half">
+            <h2 class="album-view-title">{{ album.albumData.title }}</h2>
+            <h3 class="album-view-artist">{{ album.albumData.artist }}</h3>
+            <h5 class="album-view-release-info">{{ album.albumData.year + " " + album.albumData.label }}</h5>
+        </div>
+    </section>
+
+    <table class="album-view song-list">
+        <tr class="song-item"
+            ng-repeat="song in album.albumData.songs track by $index"
+            ng-mouseover="hovered = true"
+            ng-mouseleave="hovered = false">
+
+            <td class="song-item-number">
+                <span ng-show="!song.playing && !hovered">{{ $index + 1 }}</span>
+
+                <a class="song-button"
+                    ng-show="!song.playing && hovered"
+                    ng-click="album.play(song, $index)"><span class="ion-play"></span>
+                </a>
+
+                <a class="song-button"
+                    ng-show="song.playing"
+                    ng-click="album.pause(song)"><span class="ion-pause"></span>
+                </a>
+            </td>
+
+            <td class="album-view-song-item-title">{{ song.title }}</td>
+            <td class="song-item-duration">{{ song.duration | timecode }}</td>
+        </tr>
+    </table>
+
+</main>
+
+<ng-include src="'js/templates/player_bar.html'"></ng-include>

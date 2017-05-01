@@ -1,0 +1,28 @@
+<!-- <div class="form-background" style="background-image:url({{ album.albumData.artURL }})"></div> -->
+<!-- <div class="form-background"></div> -->
+<ng-include src="'top_nav.html'"></ng-include>
+
+<section class="hero-content form-background">
+
+    <h1 class="hero-title">{{ auth.heroTitle }}</h1>
+
+    <form ng-submit="register()">
+        <div>
+            <input type="email" placeholder="Email" ng-model="user.email">
+        </div>
+        <br/>
+
+        <div>
+            <input type="text" placeholder="Username" ng-model="user.username">
+        </div>
+        <br/>
+
+        <div>
+            <input type="password" placeholder="Password" ng-model="user.password">
+        </div>
+        <br/>
+
+        <input type="submit" class="button" value="Get Started">
+    </form>
+
+</section>

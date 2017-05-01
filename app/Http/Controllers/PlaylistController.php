@@ -26,8 +26,7 @@ class PlaylistController extends Controller
      */
     public function show($id)
     {
-        $playlist = Playlist::find($id);
-        return $playlist->with('songs')->get();
+        return Playlist::find($id)->load('songs');
     }
 
     /**

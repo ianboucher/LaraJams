@@ -1,0 +1,28 @@
+<ng-include src="'js/templates/left_nav.html'"></ng-include>
+
+<main>
+    <section class="playlist-heading container clearfix">
+        <h1>Browse Playlists</h1>
+        <a ui-sref="newPlaylist">
+            <button class="button">Make a New Playlist</button>
+        </a>
+    </section>
+
+    <section class="container clearfix">
+        <div class="playlist-album-container column third" ng-repeat="playlist in playlists.index track by $index">
+            <div>
+                <a ui-sref="playlist({id: playlist.id})"><img src="{{ playlist.artURL }}"></a>
+                <div class="ion-ios-list-outline"></div>
+            </div>
+            <div class="playlist-album-info caption">
+                <p>
+                    <a class="album-name" ui-sref="playlist({id: playlist.id})">
+                        {{ playlist.name }} — {{ playlist.description }}
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<ng-include src="'js/templates/player_bar.html'"></ng-include>
