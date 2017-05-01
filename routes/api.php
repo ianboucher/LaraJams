@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// API ROUTES =============================================================
+Route::group(["prefix" => "v1.0.0"], function()
+{
+    Route::resource('albums',    'AlbumsController',    ['only' => ['index', 'show']]);
+    Route::resource('songs',     'SongsController',     ['only' => ['index', 'show']]);
+    Route::resource('playlists', 'PlaylistsController', ['only' => ['index', 'show', 'create']]);
+});
