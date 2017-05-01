@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Playlist;
+use App\User;
 
 class PlaylistController extends Controller
 {
@@ -37,12 +39,12 @@ class PlaylistController extends Controller
      */
     public function store(Request $request, $userId)
     {
-        $user    = User::findOrFail($userId);
-        $playlist = $user->playlists()->create([
+        $user      = User::findOrFail($userId);
+        $playlist  = $user->playlists()->create([
             'name' => $request->input('playlist.name'),
             'description' => $request->input('playlist.description')
         ]);
-        
+
         $playlist->save();
         return response()->json($playlist);
     }
