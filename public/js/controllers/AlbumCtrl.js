@@ -29,6 +29,7 @@
                 */
                 self.play = function(song, index)
                 {
+                    console.log(song);
                     SongPlayer.play(song, index);
                     SongPlayer.currentAlbum = SongPlayer.displayedAlbum;
                 };
